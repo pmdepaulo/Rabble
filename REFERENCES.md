@@ -13,6 +13,11 @@ Homework #1:
     This then gave me some code for making a profile button and I used that to make a second Log Out button. 
     Finally, I was curious about how to customize the buttons, so I sent in the prompt "what are the different btn classes" so that I could understand the "btn" types better.
     It gave me a bunch of color customizations and different styles that I chose from to make my Rabble buttons.
+    Additionally, I had a Django error that would not let me log out when I was logged in. I was directed to the following 
+    site after I asked about this on Slack:
+    https://stackoverflow.com/questions/77928535/django-can-login-but-cant-logout-405-method-not-allowed 
+    This fixed my issue with the four lines of code that replaced the button instructions with an HTML POST form. 
+
 
 
 
