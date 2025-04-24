@@ -1,3 +1,25 @@
+Homework #3:
+    Satisfactory Tasks:
+        For the detail views, I used the CRUD notes alongside the following prompts into ChatGPT:
+            "html rendering as plaintext" (for help understanding why my html file wasn't rendering)
+            "django view getting unexpected parameter passed in" (for help with a repeated error that I was getting, which 
+            was resolved when Chat reminded me to add a parameter into the actual view function)
+            "in a views file with django where is the request being passed in from" (to help debug the previous error 
+            before I understood what the error meant)
+            "does django hold onto past migrations or write over them" (when trying to understand why a previous migration
+            error was not resolving even after deleting the buggy line--I then just deleted the migrations manually)
+        For help with the PostForm, I asked ChatGPT this prompt: "how to create a django PostForm inside a forms.py file in a django project",
+        which gave me a clearer idea of what exactly a form was in Django and how to structure it around my model, Posts. I also used this 
+        documentation page: https://docs.djangoproject.com/en/5.2/topics/forms/modelforms/ for help on understanding why my form wasn't
+        updating the user alongside it (which then led me to just manually adding the user before saving the form).
+
+    Extra Tasks:
+        For implementing the extra tasks, I only used outside sources for the authentication one. I used this developer
+        post: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication, 
+        which gave me several different methods that I used to implement the login authorization. I also asked ChatGPT
+        the following prompt: "how to take a user back to the login screen in a views file django", which then informed me 
+        that my problem could be solved using a previous technique that we had used (reverse()). 
+
 Homework #2:
     For this homework, I wrote all of my models manually. However, I did use ChatGPT 4o to ask about clarification on 
     the type syntax for the model attributes. I used this for models.JSONField() to represent an array, BooleanField to
