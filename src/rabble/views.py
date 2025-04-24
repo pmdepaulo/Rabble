@@ -6,24 +6,22 @@ from .forms import PostForm
 from django.shortcuts import redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
+@login_required()
 def index(request):
-    if request.user.is_authenticated:
-        subrabbles = SubRabbles.objects.all()
-        return render(request, "rabble/index.html", {'subrabbles': subrabbles, 'logged_in': True})
-    else:
-        return redirect(reverse('login'))
+    subrabbles = SubRabbles.objects.all()
+    return render(request, "rabble/index.html", {'subrabbles': subrabbles})
 
-@login_required(login_url='/login/')
+@login_required()
 def profile(request):
     return render(request, "rabble/profile.html")
 
-@login_required(login_url='/login/')
+@login_required()
 def subrabble_detail(request, rabble_name):
     subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
     posts = Posts.objects.filter(subrabble_id=subrabble.id).annotate(like_count=Count('likes'), comment_count=Count('comments'))
     return render(request, "rabble/subrabble_detail.html", {'subrabble': subrabble, 'posts': posts})
 
-@login_required(login_url='/login/')
+@login_required()
 def post_detail(request, rabble_name, pk):
     subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
     post = Posts.objects.get(id=pk)
@@ -33,7 +31,7 @@ def post_detail(request, rabble_name, pk):
     return render(request, "rabble/post_detail.html", {'subrabble': subrabble, \
     'post': post, 'likes': like_count, 'comments': comments, 'comment_count': len(comments)})
 
-@login_required(login_url='/login/')
+@login_required()
 def post_create(request, rabble_name):
     subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
     if request.method == 'POST':
@@ -48,7 +46,7 @@ def post_create(request, rabble_name):
         form = PostForm()
     return render(request, 'rabble/post_form.html', {'form': form, 'subrabble': subrabble})
 
-@login_required(login_url='/login/')
+@login_required()
 def post_edit(request, pk, rabble_name):
     subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
     post = get_object_or_404(Posts, id=pk)

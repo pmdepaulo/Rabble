@@ -16,9 +16,8 @@ Homework #3:
     Extra Tasks:
         For implementing the extra tasks, I only used outside sources for the authentication one. I used this developer
         post: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication, 
-        which gave me several different methods that I used to implement the login authorization. I also asked ChatGPT
-        the following prompt: "how to take a user back to the login screen in a views file django", which then informed me 
-        that my problem could be solved using a previous technique that we had used (reverse()). 
+        which was recommended by Prof. Sotomayor and gave me the @login_required() method that made authentication fairly
+        simple to implement. 
 
 Homework #2:
     For this homework, I wrote all of my models manually. However, I did use ChatGPT 4o to ask about clarification on 
