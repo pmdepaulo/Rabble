@@ -1,14 +1,10 @@
 {% extends "rabble/base.html" %}
-
+    
 {% block content %}
 <p>
-   Username: {{ user.username }}
+   This is the profile page.
 </p>
 <p>
-   Email Address: {{ user.email }}
-</p>
-<p>
-    <a href="/">Index</a>
+    <a href="{% url 'index' %}">Index</a>
 </p>
 {% endblock content %}
-

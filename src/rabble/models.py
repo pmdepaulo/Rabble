@@ -29,6 +29,7 @@ class Community_Members(models.Model):
 class SubRabbles(models.Model):
     id = models.IntegerField(primary_key=True)
     rabble_name = models.TextField(unique=True)
+    display_name = models.TextField(null=True)
     description = models.TextField(null=True)
     community_id = models.ForeignKey(Communities, on_delete=models.CASCADE)
     public = models.BooleanField(default=True)

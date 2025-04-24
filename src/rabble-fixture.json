@@ -1,0 +1,255 @@
+[
+{
+    "model": "rabble.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$1VBWWvWIrep1VWyG7v9Ny6$WiDLOeM47kHdU7qZD0YWFIOVv+LrFdUQY0KNoIT62gs=",
+        "last_login": "2025-04-16T16:19:18.021Z",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-04-06T19:22:57.179Z",
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "bio": null,
+        "interests": [],
+        "email": "admin@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 2,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-17T20:05:41.594Z",
+        "username": "paulinamae",
+        "first_name": "Paulina",
+        "last_name": "DePaulo",
+        "bio": "hi",
+        "interests": [
+            "cats"
+        ],
+        "email": "pdepaulo@uchicago.edu",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$gCJyadJ4RFwMCGgx7AJTdO$pZ2QE2JMJ0sliHkz28QKPigC0Hajv+0zJbemRgQDy5I=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-23T01:22:11.336Z",
+        "username": "alex",
+        "first_name": null,
+        "last_name": null,
+        "bio": null,
+        "interests": [],
+        "email": "alex@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$9W86kEoepm2kFoOR7y2t4Z$HQh8x/+hQpI7/+0pzejBoxlr5U1bC4cHQjAmPTDGox0=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-23T01:23:07.375Z",
+        "username": "sam",
+        "first_name": null,
+        "last_name": null,
+        "bio": null,
+        "interests": [],
+        "email": "sam@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$j5YnrercBfh0GnCm4uO7Nr$1PT4EMDi+WR2/CqKX9MVcgGTqoXC20h9j1juJfiubI4=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-23T01:23:26.725Z",
+        "username": "chris",
+        "first_name": null,
+        "last_name": null,
+        "bio": null,
+        "interests": [],
+        "email": "chris@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$t7l5jgMWXWVFknL7w0cZtZ$NIrcJRlFFo6gENaZnYeJE1y5EdWm/3PKwgY1T310PiE=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-23T01:23:58.485Z",
+        "username": "morgan",
+        "first_name": null,
+        "last_name": null,
+        "bio": null,
+        "interests": [],
+        "email": "morgan@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$PwxtLbrynqPD8hLfZNIXYH$mN6ShWK17vVlhpyraBLQO8QIISOFmvppyGx9gEViPeg=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-04-23T01:24:19.289Z",
+        "username": "drew",
+        "first_name": null,
+        "last_name": null,
+        "bio": null,
+        "interests": [],
+        "email": "drew@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.communities",
+    "pk": 1,
+    "fields": {
+        "name": "default",
+        "owner_user_id": 4,
+        "admin": []
+    }
+},
+{
+    "model": "rabble.subrabbles",
+    "pk": 1,
+    "fields": {
+        "rabble_name": "cs-courses",
+        "description": null,
+        "community_id": 1,
+        "public": true,
+        "allow_anon": true
+    }
+},
+{
+    "model": "rabble.subrabbles",
+    "pk": 2,
+    "fields": {
+        "rabble_name": "python",
+        "description": null,
+        "community_id": 1,
+        "public": true,
+        "allow_anon": true
+    }
+},
+{
+    "model": "rabble.subrabbles",
+    "pk": 3,
+    "fields": {
+        "rabble_name": "web-dev",
+        "description": null,
+        "community_id": 1,
+        "public": true,
+        "allow_anon": true
+    }
+},
+{
+    "model": "rabble.posts",
+    "pk": 1,
+    "fields": {
+        "title": null,
+        "body": null,
+        "user_id": 3,
+        "subrabble_id": 1,
+        "created_at": "2025-04-23T01:50:34.215Z",
+        "anonymous": false
+    }
+},
+{
+    "model": "rabble.posts",
+    "pk": 2,
+    "fields": {
+        "title": null,
+        "body": null,
+        "user_id": 4,
+        "subrabble_id": 1,
+        "created_at": "2025-04-23T01:50:58.146Z",
+        "anonymous": false
+    }
+},
+{
+    "model": "rabble.posts",
+    "pk": 3,
+    "fields": {
+        "title": null,
+        "body": null,
+        "user_id": 5,
+        "subrabble_id": 1,
+        "created_at": "2025-04-23T01:51:10.988Z",
+        "anonymous": false
+    }
+},
+{
+    "model": "rabble.comments",
+    "pk": 1,
+    "fields": {
+        "body": "this is comment 1 on post1",
+        "user_id": 4,
+        "post_id": 1,
+        "created_at": "2025-04-23T01:53:02.129Z",
+        "anonymous": false
+    }
+},
+{
+    "model": "rabble.comments",
+    "pk": 2,
+    "fields": {
+        "body": "this is comment 2 on post1",
+        "user_id": 5,
+        "post_id": 1,
+        "created_at": "2025-04-23T01:53:24.211Z",
+        "anonymous": false
+    }
+},
+{
+    "model": "rabble.comments",
+    "pk": 3,
+    "fields": {
+        "body": "this is comment 3 on post1",
+        "user_id": 6,
+        "post_id": 1,
+        "created_at": "2025-04-23T01:53:41.191Z",
+        "anonymous": false
+    }
+}
+]
