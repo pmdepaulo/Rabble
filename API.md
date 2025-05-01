@@ -29,3 +29,14 @@
         "created_at": "2025-04-23T01:50:34.215004Z",
         "anonymous": false
     }
+
+## PATCH: /api/subrabbles/!cs-courses/posts/1
+    {
+        "id": 1,
+        "title": "computer science",
+        "body": "i HATE cs it's so awful",
+        "user_id": 3,
+        "subrabble_id": 1,
+        "created_at": "2025-04-23T01:50:34.215004Z",
+        "anonymous": false
+    }

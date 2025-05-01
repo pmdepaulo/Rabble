@@ -3,8 +3,8 @@
     "model": "rabble.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$870000$1VBWWvWIrep1VWyG7v9Ny6$WiDLOeM47kHdU7qZD0YWFIOVv+LrFdUQY0KNoIT62gs=",
-        "last_login": "2025-04-16T16:19:18.021Z",
+        "password": "pbkdf2_sha256$600000$QAEpua9M8vJ74mDuTWl4tq$983SEeAkpzBIyfZu3HHrGHjDaC8Nn1ObUA3pcXqfGA0=",
+        "last_login": "2025-04-24T05:23:45.452Z",
         "is_superuser": true,
         "is_staff": true,
         "is_active": true,
@@ -45,8 +45,8 @@
     "model": "rabble.user",
     "pk": 3,
     "fields": {
-        "password": "pbkdf2_sha256$870000$gCJyadJ4RFwMCGgx7AJTdO$pZ2QE2JMJ0sliHkz28QKPigC0Hajv+0zJbemRgQDy5I=",
-        "last_login": null,
+        "password": "pbkdf2_sha256$600000$UMo8r7Dgi1CfOJ0MIoefOu$LRQm6flLC3FfSBJsyAhPMTKTfK0HNkVcz89jETq41Tc=",
+        "last_login": "2025-04-24T22:51:18.528Z",
         "is_superuser": false,
         "is_staff": false,
         "is_active": true,
@@ -155,7 +155,8 @@
     "pk": 1,
     "fields": {
         "rabble_name": "cs-courses",
-        "description": null,
+        "display_name": "CS Courses",
+        "description": "Place to discuss CS courses",
         "community_id": 1,
         "public": true,
         "allow_anon": true
@@ -166,7 +167,8 @@
     "pk": 2,
     "fields": {
         "rabble_name": "python",
-        "description": null,
+        "display_name": "Python",
+        "description": "Discuss the Python language",
         "community_id": 1,
         "public": true,
         "allow_anon": true
@@ -177,7 +179,8 @@
     "pk": 3,
     "fields": {
         "rabble_name": "web-dev",
-        "description": null,
+        "display_name": "Web Dev",
+        "description": "Place to discuss web development",
         "community_id": 1,
         "public": true,
         "allow_anon": true
@@ -187,8 +190,8 @@
     "model": "rabble.posts",
     "pk": 1,
     "fields": {
-        "title": null,
-        "body": null,
+        "title": "computer science",
+        "body": "i LOVE cs it's so fun!",
         "user_id": 3,
         "subrabble_id": 1,
         "created_at": "2025-04-23T01:50:34.215Z",
@@ -199,8 +202,8 @@
     "model": "rabble.posts",
     "pk": 2,
     "fields": {
-        "title": null,
-        "body": null,
+        "title": "cs...",
+        "body": "ngl cs classes are the worst",
         "user_id": 4,
         "subrabble_id": 1,
         "created_at": "2025-04-23T01:50:58.146Z",
@@ -211,8 +214,8 @@
     "model": "rabble.posts",
     "pk": 3,
     "fields": {
-        "title": null,
-        "body": null,
+        "title": "i <3 143",
+        "body": "best class in the sequence!",
         "user_id": 5,
         "subrabble_id": 1,
         "created_at": "2025-04-23T01:51:10.988Z",
@@ -220,10 +223,22 @@
     }
 },
 {
+    "model": "rabble.posts",
+    "pk": 4,
+    "fields": {
+        "title": "new post! (but edited...)",
+        "body": "yay hello new post",
+        "user_id": 3,
+        "subrabble_id": 1,
+        "created_at": "2025-04-24T05:24:16.308Z",
+        "anonymous": false
+    }
+},
+{
     "model": "rabble.comments",
     "pk": 1,
     "fields": {
-        "body": "this is comment 1 on post1",
+        "body": "based",
         "user_id": 4,
         "post_id": 1,
         "created_at": "2025-04-23T01:53:02.129Z",
@@ -234,7 +249,7 @@
     "model": "rabble.comments",
     "pk": 2,
     "fields": {
-        "body": "this is comment 2 on post1",
+        "body": "hmmmm can't say i agree",
         "user_id": 5,
         "post_id": 1,
         "created_at": "2025-04-23T01:53:24.211Z",
@@ -245,11 +260,20 @@
     "model": "rabble.comments",
     "pk": 3,
     "fields": {
-        "body": "this is comment 3 on post1",
+        "body": "I personally don't really like cs, it's too hard",
         "user_id": 6,
         "post_id": 1,
         "created_at": "2025-04-23T01:53:41.191Z",
         "anonymous": false
+    }
+},
+{
+    "model": "rabble.likes",
+    "pk": 1,
+    "fields": {
+        "user_id": 3,
+        "post_id": 2,
+        "created_at": "2025-04-23T21:36:12.399Z"
     }
 }
 ]
