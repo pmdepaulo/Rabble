@@ -1,3 +1,10 @@
+Homework #4:
+    Satisfactory Tasks:
+        I did not use any outside sources other than the API lecture notes.
+    
+    Extra Tasks:
+        For the extra tasks, I first 
+
 Homework #3:
     Satisfactory Tasks:
         For the detail views, I used the CRUD notes alongside the following prompts into ChatGPT:

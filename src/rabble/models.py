@@ -10,6 +10,9 @@ class User(AbstractUser):
     interests = models.JSONField(default=list)
     email = models.TextField(unique=True)
 
+    def __str__(self):
+        return self.username
+
 class User_Followers(models.Model):
     id = models.IntegerField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followers')
@@ -34,6 +37,9 @@ class SubRabbles(models.Model):
     community_id = models.ForeignKey(Communities, on_delete=models.CASCADE)
     public = models.BooleanField(default=True)
     allow_anon = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.rabble_name
 
 class SubRabble_Members(models.Model):
     id = models.IntegerField(primary_key=True)

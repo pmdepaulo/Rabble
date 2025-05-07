@@ -37,9 +37,12 @@ class SubRabble_AdminSerializer(serializers.ModelSerializer):
         fields = ['user_id', 'subrabble_id']
 
 class PostsSerializer(serializers.ModelSerializer):
+    subrabble = serializers.SlugRelatedField(queryset=SubRabbles.objects.all(), slug_field='rabble_name', source='subrabble_id')
+    author = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username', source='user_id')
+
     class Meta:
         model = Posts
-        fields = ['id', 'title', 'body', 'user_id', 'subrabble_id', 'created_at', 'anonymous']
+        fields = ['id', 'title', 'body', 'author', 'subrabble', 'created_at', 'anonymous']
 
 class CommentsSerializer(serializers.ModelSerializer):
     class Meta:
