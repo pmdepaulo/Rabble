@@ -42,7 +42,7 @@ def post_in_subrabble(request, rabble_name, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = PostsSerializer(post, many=False)
+        serializer = PostsSerializer(post, many=False, context={'request': request})
         return Response(serializer.data)
     elif request.method == 'PATCH':
         serializer = PostsSerializer(post, data=request.data, partial=True)
@@ -53,3 +53,28 @@ def post_in_subrabble(request, rabble_name, pk):
     elif request.method == 'DELETE':
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['POST'])
+def post_likes(request, rabble_name, pk):
+    try:
+        subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
+        post = Posts.objects.get(subrabble_id=subrabble.id, id=pk)
+    except Posts.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    
+    if request.method == 'POST':
+        like_count = len(Likes.objects.filter(post_id=pk))
+        liked = True
+
+        user_like = Likes.objects.filter(post_id=pk, user_id=request.user)
+        if user_like.count():
+            user_like.delete()
+            liked = False
+            like_count -= 1
+        else:
+            liked = True
+            like_count += 1
+            new_like = Likes(user_id=request.user, post_id=post)
+            new_like.save()
+        
+        return Response({"liked": liked, "like_count": like_count})

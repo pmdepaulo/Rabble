@@ -18,7 +18,7 @@ def profile(request):
 @login_required()
 def subrabble_detail(request, rabble_name):
     subrabble = SubRabbles.objects.get(rabble_name=rabble_name)
-    posts = Posts.objects.filter(subrabble_id=subrabble.id).annotate(like_count=Count('likes'), comment_count=Count('comments'))
+    posts = Posts.objects.filter(subrabble_id=subrabble.id).annotate(like_count=Count('likes', distinct=True), comment_count=Count('comments', distinct=True))
     return render(request, "rabble/subrabble_detail.html", {'subrabble': subrabble, 'posts': posts})
 
 @login_required()
@@ -27,9 +27,12 @@ def post_detail(request, rabble_name, pk):
     post = Posts.objects.get(id=pk)
     likes = Likes.objects.filter(post_id=pk)
     like_count = len(likes)
+    print(like_count)
     comments = Comments.objects.filter(post_id=pk)
+    print(len(comments))
+    liked = likes.filter(user_id=request.user).exists()
     return render(request, "rabble/post_detail.html", {'subrabble': subrabble, \
-    'post': post, 'likes': like_count, 'comments': comments, 'comment_count': len(comments)})
+    'post': post, 'likes': like_count, 'comments': comments, 'comment_count': len(comments), 'liked': liked})
 
 @login_required()
 def post_create(request, rabble_name):

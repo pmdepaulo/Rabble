@@ -15,7 +15,16 @@
         <p>{{ post.body }}</p>
 
         <div class="d-flex justify-content-start align-items-center gap-3 mt-4">
-            <span>👍 {{ likes }}</span>
+            <span>
+
+                <button id='like-button' data-user="{{ request.user.username }}" 
+                data-url="{% url 'post-likes' subrabble.rabble_name post.id %}" 
+                data-rabble="{{ subrabble.rabble_name }}"
+                data-post="{{ post.id }}"
+                data-liked="{{ liked|yesno:'true,false' }}" >
+                    👍 {{ likes }}
+                </button>
+            </span>
             <span>💬 {{ comment_count }}</span>
             {% if user == post.user_id %}
                 <a href="{% url 'post-edit' subrabble.rabble_name post.id %}" class="btn btn-outline-secondary btn-sm ms-2">
@@ -43,4 +52,48 @@
     {% else %}
         <p>No comments yet. Be the first to comment!</p>
     {% endif %}
+
+{% csrf_token %}
+<script>
+    console.log("Script loaded");
+    const likeButton = document.getElementById('like-button');
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    if (likeButton.dataset.liked === "true") {
+        console.log(likeButton.dataset.liked);
+        likeButton.style.backgroundColor = "gray";
+    } else {
+        console.log(likeButton.dataset.liked);
+        likeButton.style.backgroundColor = "white";
+    }
+
+    async function updateLikes(url){
+        try{
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrftoken,
+                },
+                body: JSON.stringify({ rabble_name: likeButton.dataset.rabble, pk: likeButton.dataset.post })
+            });
+
+            const json = await response.json();
+            console.log(json);
+
+            likes = json.like_count;
+            likeButton.textContent = `👍 ${likes}`;
+            if (json.liked === true){
+                likeButton.style.backgroundColor = "gray";
+            } else{
+                likeButton.style.backgroundColor = "white";
+            }
+        } catch(error){
+            console.error(error.message);
+        }
+    }
+
+    likeButton.addEventListener("click", function(){
+        updateLikes(likeButton.dataset.url)
+    });
+</script>
 {% endblock %}

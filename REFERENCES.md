@@ -3,8 +3,22 @@ Homework #4:
         I did not use any outside sources other than the API lecture notes.
     
     Extra Tasks:
-        For the extra tasks, I first 
+        For the first extra task, I referenced the DRF lecture notes, but to implement support for POST requests,
+        I asked the following prompt into ChatGPT: "how to make a stringrelatedfield accept post requests."
+        This directed me to SlugRelatedField, which I then looked up and used using this documentation:
+        https://www.django-rest-framework.org/api-guide/relations/#slugrelatedfield.
 
+        For the second extra task, I used the following ChatGPT prompts to figure out what frameworks I needed:
+            "how to implement a toggle feature inside an api view function for post request"
+            "how to use the response (JSON data) from the api to update the frontend button accordingly"
+            "indexing into JSON const"
+            "how to make html template check JSON variable on render"
+        I then used these web resources:
+            https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (using Fetch in JS)
+            https://docs.djangoproject.com/en/5.2/howto/csrf/ (CSRF token information)
+            https://www.wikihow.com/Change-Button-Color-in-Javascript (button color changing in JavaScript)
+            https://docs.djangoproject.com/en/5.2/ref/models/instances/ (making an instance of a model, saving it)
+            
 Homework #3:
     Satisfactory Tasks:
         For the detail views, I used the CRUD notes alongside the following prompts into ChatGPT:
