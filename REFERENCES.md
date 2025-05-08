@@ -1,3 +1,18 @@
+Homework #5:
+    Satisfactory Tasks:
+        I used this documentation on the Factory class (particularly Faker()):
+            https://factoryboy.readthedocs.io/en/stable/reference.html#the-factory-class
+        I also referenced this GitHub post about the Faker class (I had trouble with it):
+            https://github.com/FactoryBoy/factory_boy/issues/426 
+        In order to figure out how to turn the Rabble name into a display name (and have them related),
+        I asked the following prompt to ChatGPT, which pointed me in the direction of using a lambda function 
+        within LazyAttribute(), and then I chose to use ".title()" to get the effect I wanted:
+            "how to use a version of previous attribute string as a new attribute in factory boy"
+
+    Extra Tasks:
+        For the Extra Tasks (continuous integration), I did not use any outside sources other than the 
+        "CI With GitHub Actions" Lecture Notes"
+
 Homework #4:
     Satisfactory Tasks:
         I did not use any outside sources other than the API lecture notes.

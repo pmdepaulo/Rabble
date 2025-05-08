@@ -27,7 +27,7 @@ class SubRabbleFactory(DjangoModelFactory):
     
     id = Sequence(lambda n: n)
     rabble_name = Faker('word')
-    display_name = LazyAttribute(lambda o: str(o.rabble_name).title())
+    display_name = LazyAttribute(lambda x: str(x.rabble_name).title())
     description = Faker('paragraph')
     community_id = SubFactory(CommunityFactory)
     public = Faker('boolean')

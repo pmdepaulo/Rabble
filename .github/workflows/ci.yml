@@ -20,7 +20,16 @@ jobs:
         run: |
           pip3 install --upgrade pip
           pip3 install -r requirements.txt
-          
+
       - name: Check Django setup
         working-directory: src/
         run: python3 manage.py check
+      
+      - name: Check Views
+        working-directory: src/rabble/tests
+        run: pytest test_views.py
+      
+      - name: Check API
+        working-directory: src/rabble/tests
+        run: pytest test_api.py
+        
