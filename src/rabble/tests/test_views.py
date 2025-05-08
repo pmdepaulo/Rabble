@@ -78,7 +78,7 @@ def test_post_create_view():
         'created_at': post.created_at,
         'anonymous': post.anonymous
     }
-    response = client.post(reverse('subrabble-detail', kwargs={'rabble_name': subrabble.rabble_name}), data=data)
+    response = client.post(reverse('subrabble-detail', kwargs={'rabble_name': subrabble.rabble_name}), data)
 
     assert response.status_code == 200
     assert response.context is not None
