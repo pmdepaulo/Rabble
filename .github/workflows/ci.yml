@@ -25,11 +25,6 @@ jobs:
         working-directory: src/
         run: python3 manage.py check
       
-      - name: Check Views
-        working-directory: src/rabble/tests
-        run: pytest test_views.py
-      
-      - name: Check API
-        working-directory: src/rabble/tests
-        run: pytest test_api.py
-        
+      - name: Run tests
+        working-directory: src/
+        run: pytest -v
