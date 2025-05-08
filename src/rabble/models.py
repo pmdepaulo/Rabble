@@ -7,7 +7,6 @@ class User(AbstractUser):
     first_name = models.TextField(null=True)
     last_name = models.TextField(null=True)
     bio = models.TextField(null=True)
-    interests = models.JSONField(default=list)
     email = models.TextField(unique=True)
 
     def __str__(self):
@@ -22,7 +21,6 @@ class Communities(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.TextField(unique=True)
     owner_user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    admin = models.JSONField(default=list)
 
 class Community_Members(models.Model):
     id = models.IntegerField(primary_key=True)
