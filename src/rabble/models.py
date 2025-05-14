@@ -28,7 +28,7 @@ class Community_Members(models.Model):
     community_id = models.ForeignKey(Communities, on_delete=models.CASCADE)
 
 class SubRabbles(models.Model):
-    id = models.IntegerField(primary_key=True)
+    #id = models.IntegerField(primary_key=True)
     rabble_name = models.TextField(unique=True)
     display_name = models.TextField(null=True)
     description = models.TextField(null=True)
@@ -50,7 +50,7 @@ class SubRabble_Admin(models.Model):
     subrabble_id = models.ForeignKey(SubRabbles, on_delete=models.CASCADE)
 
 class Posts(models.Model):
-    id = models.IntegerField(primary_key=True)
+    #id = models.IntegerField(primary_key=True)
     title = models.TextField(null=True)
     body = models.TextField(null=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -67,7 +67,7 @@ class Comments(models.Model):
     anonymous = models.BooleanField(default=False)
 
 class Likes(models.Model):
-    id = models.IntegerField(primary_key=True)
+    #id = models.IntegerField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     post_id = models.ForeignKey(Posts, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)

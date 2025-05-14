@@ -1,3 +1,6 @@
+Homework #6:
+    I did not use any outside sources other than the lecture notes for this homework. 
+
 Homework #5:
     Satisfactory Tasks:
         I used this documentation on the Factory class (particularly Faker()):

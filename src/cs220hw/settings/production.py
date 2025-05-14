@@ -21,3 +21,5 @@ STORAGES = {
         "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 } 
+
+DEBUG=True
