@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$600000$QAEpua9M8vJ74mDuTWl4tq$983SEeAkpzBIyfZu3HHrGHjDaC8Nn1ObUA3pcXqfGA0=",
-        "last_login": "2025-04-24T05:23:45.452Z",
+        "last_login": "2025-05-08T04:10:14.722Z",
         "is_superuser": true,
         "is_staff": true,
         "is_active": true,
@@ -13,7 +13,6 @@
         "first_name": "",
         "last_name": "",
         "bio": null,
-        "interests": [],
         "email": "admin@example.com",
         "groups": [],
         "user_permissions": []
@@ -33,9 +32,6 @@
         "first_name": "Paulina",
         "last_name": "DePaulo",
         "bio": "hi",
-        "interests": [
-            "cats"
-        ],
         "email": "pdepaulo@uchicago.edu",
         "groups": [],
         "user_permissions": []
@@ -46,7 +42,7 @@
     "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$600000$UMo8r7Dgi1CfOJ0MIoefOu$LRQm6flLC3FfSBJsyAhPMTKTfK0HNkVcz89jETq41Tc=",
-        "last_login": "2025-04-24T22:51:18.528Z",
+        "last_login": "2025-05-08T04:39:54.524Z",
         "is_superuser": false,
         "is_staff": false,
         "is_active": true,
@@ -55,7 +51,6 @@
         "first_name": null,
         "last_name": null,
         "bio": null,
-        "interests": [],
         "email": "alex@example.com",
         "groups": [],
         "user_permissions": []
@@ -75,7 +70,6 @@
         "first_name": null,
         "last_name": null,
         "bio": null,
-        "interests": [],
         "email": "sam@example.com",
         "groups": [],
         "user_permissions": []
@@ -85,8 +79,8 @@
     "model": "rabble.user",
     "pk": 5,
     "fields": {
-        "password": "pbkdf2_sha256$870000$j5YnrercBfh0GnCm4uO7Nr$1PT4EMDi+WR2/CqKX9MVcgGTqoXC20h9j1juJfiubI4=",
-        "last_login": null,
+        "password": "pbkdf2_sha256$600000$D9UcqmHo9w6MmLSM7ZyEqP$owPCu6IhU2735ceUv0AB7aCYv+kC09i9o1p/BRUvUtM=",
+        "last_login": "2025-05-07T20:03:04.592Z",
         "is_superuser": false,
         "is_staff": false,
         "is_active": true,
@@ -95,7 +89,6 @@
         "first_name": null,
         "last_name": null,
         "bio": null,
-        "interests": [],
         "email": "chris@example.com",
         "groups": [],
         "user_permissions": []
@@ -115,7 +108,6 @@
         "first_name": null,
         "last_name": null,
         "bio": null,
-        "interests": [],
         "email": "morgan@example.com",
         "groups": [],
         "user_permissions": []
@@ -135,8 +127,45 @@
         "first_name": null,
         "last_name": null,
         "bio": null,
-        "interests": [],
         "email": "drew@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 8,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-08T04:55:06.764Z",
+        "username": "Mrs. Susan Brown",
+        "first_name": "Sandra",
+        "last_name": "Hodge",
+        "bio": "Experience method relate approach skill source whose.",
+        "email": "ortizsamantha@example.net",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "rabble.user",
+    "pk": 9,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-08T04:59:23.870Z",
+        "username": "Travis Daniel",
+        "first_name": "Michael",
+        "last_name": "Gonzalez",
+        "bio": "Despite doctor heavy.",
+        "email": "alexandra25@example.org",
         "groups": [],
         "user_permissions": []
     }
@@ -146,8 +175,7 @@
     "pk": 1,
     "fields": {
         "name": "default",
-        "owner_user_id": 4,
-        "admin": []
+        "owner_user_id": 4
     }
 },
 {
@@ -274,6 +302,42 @@
         "user_id": 3,
         "post_id": 2,
         "created_at": "2025-04-23T21:36:12.399Z"
+    }
+},
+{
+    "model": "rabble.likes",
+    "pk": 5,
+    "fields": {
+        "user_id": 5,
+        "post_id": 3,
+        "created_at": "2025-05-07T20:03:35.691Z"
+    }
+},
+{
+    "model": "rabble.likes",
+    "pk": 6,
+    "fields": {
+        "user_id": 5,
+        "post_id": 4,
+        "created_at": "2025-05-07T20:03:39.529Z"
+    }
+},
+{
+    "model": "rabble.likes",
+    "pk": 7,
+    "fields": {
+        "user_id": 5,
+        "post_id": 2,
+        "created_at": "2025-05-07T20:15:17.193Z"
+    }
+},
+{
+    "model": "rabble.likes",
+    "pk": 8,
+    "fields": {
+        "user_id": 5,
+        "post_id": 1,
+        "created_at": "2025-05-08T00:48:48.664Z"
     }
 }
 ]
