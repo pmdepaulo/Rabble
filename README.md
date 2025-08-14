@@ -1,3 +1,4 @@
-# CMSC 22000 Homework
+# Rabble
 
-Paulina DePaulo (pdepaulo)
+Programmed by Paulina DePaulo for CMSC220. I acknowledge Borja Sotomayor and all course staff for assistance. 
+
